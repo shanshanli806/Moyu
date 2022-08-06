@@ -134,7 +134,9 @@ body {
 .container {
   margin: 100px 0 ;
 }
-.about-img,
+.about-img {
+  width: 300px;
+}
 .contact-img {
   width: 170px;
 }
