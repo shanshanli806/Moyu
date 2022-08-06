@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <!-- ^^ includes all international unicodes-->
+    <title>MOYU</title>
+    <link rel="stylesheet" href="src/styles.css" />
+    <link rel="icon" href="src/assets/favicon.ico" />
+
+    <!-- Devicon -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css"
+    />
+
+    <!-- Font Awesome -->
+    <script
+      defer
+      src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"
+    ></script>
+  </head>
+
+  <body>
+    <header class="navigation" id="home">
+      <div class="nav-container">
+        <div class="nav-brand">
+          <a href="#">MOYU</a>
+        </div>
+        <nav>
+          <ul class="nav-menu" id="menu">
+            <li class="nav-link"><a id="nav-toggle" href="#"><i class="fa fa-bars"></i></a></li>
+            <li class="nav-item"><a class="nav-link" href="#home">HOME</a></li>
+            <li class="nav-item"><a class="nav-link" href="#about">ABOUT</a></li>
+            <li class="nav-item"><a class="nav-link" href="#skill">SKILLS</a></li>
+            <li class="nav-item"><a class="nav-link" href="#" onclick="dropdown()">PROJECT</a>
+              <ul class="nav-dropdown" id="nav-drop">
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Coming soon...</a>
+                </li>
+                <!-- <li class="nav-item">
+                  <a class="nav-link" href="#">Pokemon</a>
+                </li> -->
+              </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="#contact">CONTACT</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <section class="white-section top-container" id="title">
+      <div id="intro">
+        <h1 class="big-heading">HELLO THERE!</h1>
+        <div class="input-box">
+          <h2 class="sub-head">Enter your name:</h2>
+          <input class="name_box" type="text" id="name" name="name" /><br />
+          <button id="enter-btn" type="button">ENTER</button>
+        </div>
+      </div>
+      <div class="welcome" id="welcome-msg"></div>
+    </section>
+
+    <section class="colored-section middle-container">
+      <!-- ABOUT -->
+      <div class="container" id="about">
+        <img class="about-img" src="src/assets/can.png" alt="canned-fish" />
+        <h2 class="section-head">I'm Shanshan</h2>
+        <div class="section-text">
+            <p>Just another front-end developer based in New York.</p>
+        </div>
+      </div>
+      <!-- SKILLS -->
+      <div class="skill">
+        <h2 class="section-head">Skills & Tools</h2>
+        <div class="skill-container">
+          <div class="box-icon">
+            <i class="skill-icon devicon-html5-plain"></i>
+            <p>HTML5</p>
+          </div>
+          <div class="box-icon">
+            <i class="skill-icon devicon-css3-plain"></i>
+            <p>CSS3</p>
+          </div>
+          <div class="box-icon">
+            <i class="skill-icon devicon-javascript-plain"></i>
+            <p>JavaScript</p>
+          </div>
+          <div class="box-icon">
+            <i class="skill-icon devicon-visualstudio-plain"></i>
+            <p>VS Code</p>
+          </div>
+          <div class="box-icon">
+            <i class="skill-icon devicon-github-original"></i>
+            <p>Github</p>
+          </div>
+        </div>
+      </div>
+      <!-- CONTACT -->
+      <div class="contact">
+        <img
+          class="contact-img"
+          src="src/assets/contact.png"
+          alt="contact-mail"
+        />
+        <h2 class="section-head">Let's start a chat.</h2>
+        <div class="section-text">
+          <p> Say 'hello', ask for my resume or any suggestion on making the website better.</p>
+          <p> I'd love to hear from you! </p>
+          <p> You should see a 'Contact Me' popup to fill in the form. If you don't please email me at shanshanli806@gmail.com.</p>
+        </div>
+        <button id="contact-btn" type="button">Contact Me</button>
+
+        <div class="popup" id="popup-contact">
+          <div class="contact-form">
+            <form action="mailto:shanshanli806@gmail.com" class="form-container" id="form" >
+              <h2>Contact Us</h2>
+              <input class="form-item" id="name" name="name" placeholder="Name" type="text" required /><br />
+              <input class="form-item" id="email" name="email" placeholder="Email" tpye="text" required /><br />
+              <textarea class="form-item" id="msg" name="message" placeholder="Typing message..." required ></textarea ><br />
+              <input class="submit-btn" id="submit" type="submit" value="Send" />
+              <input class="cancel-btn" id="cancel" type="button" value="Cancel" onclick="form_clicked()"/>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+		<a class="footer-link" href="https://www.linkedin.com/in/shanshan-li-a57782212/" alt="linkedin"><i class="devicon-linkedin-plain"></i>Linkedin</a>
+		<a class="footer-link" href="https://github.com/shanshanli806" alt="github"><i class="devicon-github-original"></i>Github</a>
+		<p>© 2022 | Designed & Built by Shanshan Li.</p>
+	</footer>
+
+    <script src="src/index.js"></script>
+  </body>
+</html>
