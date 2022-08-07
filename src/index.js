@@ -78,22 +78,3 @@ function loadImages() {
     });
 }
 
-//可以用了
-function findMovie() {
-  fetch("https://www.omdbapi.com/?i=tt0372784&apikey=d00f2bb6")
-    .then((res) => {
-      if (!res.ok) {
-        throw Error("Could not fetch the data for that resource");
-      }
-      return res.json();
-    })
-    .then((data) => {
-      console.log(data);
-      const img = document.createElement("img");
-      img.src = `${data.Poster}`;
-      container.appendChild(img);
-    })
-    .catch((err) => {
-      console.log(err);
-    });
-}
